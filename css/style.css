@@ -337,10 +337,14 @@ html, body, #fullpage{
   border-radius: 100%;
 }
 .avatar-name {
-  writing-mode: vertical-lr
+  width: 18px;
+  /* writing-mode: vertical-lr */
 }
 .avatar-slogan {
-  writing-mode: vertical-lr;
+  /* writing-mode: vertical-lr; */
+  width: 18px;
+  float: left;
+  margin-right: 10px;
   max-height: 200px;
 }
 .global-container {

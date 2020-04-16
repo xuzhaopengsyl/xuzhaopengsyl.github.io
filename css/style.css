@@ -337,14 +337,14 @@ html, body, #fullpage{
   border-radius: 100%;
 }
 .avatar-name {
-  width: 18px;
-  /* writing-mode: vertical-lr */
+  writing-mode: vertical-lr;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
+  writing-mode: tb-lr;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/  
+
 }
 .avatar-slogan {
-  /* writing-mode: vertical-lr; */
-  width: 18px;
-  float: left;
-  margin-right: 10px;
+  writing-mode: vertical-lr;/*从左向右 从右向左是 writing-mode: vertical-rl;*/  
+  writing-mode: tb-lr;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/  
+
   max-height: 200px;
 }
 .global-container {

@@ -69,7 +69,7 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/16/Axios/">Axios</a>
+      <a class="article-title" href="/2020/04/16/Axios/">axios原理及面试题</a>
     </h1>
   
 
@@ -88,7 +88,7 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h1 id="axios原理及面试题"><a href="#axios原理及面试题" class="headerlink" title="axios原理及面试题"></a>axios原理及面试题</h1><h2 id="axios原理"><a href="#axios原理" class="headerlink" title="axios原理"></a>axios原理</h2><h4 id=""><a href="#" class="headerlink" title=""></a></h4><p>createInstance底层根据默认设置 新建一个Axios对象， axios中所有的请求[axios, axios.get, axios.post等…]内部调用的都是Axios.prototype.request,将Axios.prototype.request的内部this绑定到新建的Axios对象上,从而形成一个axios实例。新建一个Axios对象时，会有两个拦截器，request拦截器，response拦截器。</p>
+        <h2 id="axios原理"><a href="#axios原理" class="headerlink" title="axios原理"></a>axios原理</h2><h4 id=""><a href="#" class="headerlink" title=""></a></h4><p>createInstance底层根据默认设置 新建一个Axios对象， axios中所有的请求[axios, axios.get, axios.post等…]内部调用的都是Axios.prototype.request,将Axios.prototype.request的内部this绑定到新建的Axios对象上,从而形成一个axios实例。新建一个Axios对象时，会有两个拦截器，request拦截器，response拦截器。</p>
 <h3 id="请求拦截器"><a href="#请求拦截器" class="headerlink" title="请求拦截器"></a>请求拦截器</h3><p><code>请求拦截器的作用是在请求发送前进行一些操作，例如在每个请求体里加上token，统一做了处理如果以后要改也非常容易。</code></p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios.interceptors.request.use(function (config) &#123;</span><br><span class="line">    &#x2F;&#x2F; 在发送请求之前做些什么，例如加入token</span><br><span class="line">    .......</span><br><span class="line">    return config;</span><br><span class="line">&#125;, function (error) &#123;</span><br><span class="line">    &#x2F;&#x2F; 对请求错误做些什么</span><br><span class="line">    return Promise.reject(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
 
@@ -395,7 +395,7 @@
       <ul>
         
           <li>
-            <a href="/2020/04/16/Axios/">Axios</a>
+            <a href="/2020/04/16/Axios/">axios原理及面试题</a>
           </li>
         
           <li>

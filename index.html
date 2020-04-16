@@ -63,6 +63,59 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-Vuex相关" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/16/Vuex%E7%9B%B8%E5%85%B3/">Vuex相关</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/04/16/Vuex%E7%9B%B8%E5%85%B3/" class="article-date">
+  <time datetime="2020-04-16T06:44:35.000Z" itemprop="datePublished">2020-04-16</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="Vuex相关"><a href="#Vuex相关" class="headerlink" title="Vuex相关"></a>Vuex相关</h2><h3 id="vuex-原理"><a href="#vuex-原理" class="headerlink" title="vuex 原理"></a>vuex 原理</h3><h4 id=""><a href="#" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vuex 仅仅是作为 vue 的一个插件而存在，不像 Redux,MobX 等库可以应用于所有框架，vuex 只能使用在 vue 上，很大的程度是因为其高度依赖于 vue 的 computed 依赖检测系统以及其插件系统，</span><br><span class="line"></span><br><span class="line">vuex 整体思想诞生于 flux,可其的实现方式完完全全的使用了 vue 自身的响应式设计，依赖监听、依赖收集都属于 vue 对对象 Property <span class="built_in">set</span> get 方法的代理劫持。最后一句话结束 vuex 工作原理，vuex 中的 store 本质就是没有 template 的隐藏着的 vue 组件；</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="vuex-有哪几种属性"><a href="#vuex-有哪几种属性" class="headerlink" title="vuex 有哪几种属性"></a>vuex 有哪几种属性</h3><h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有 5 种，分别是 state、getter、mutation、action、module</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="vuex-的-store-特性是什么"><a href="#vuex-的-store-特性是什么" class="headerlink" title="vuex 的 store 特性是什么"></a>vuex 的 store 特性是什么</h3><h4 id="-2"><a href="#-2" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vuex 就是一个仓库，仓库里放了很多对象。其中 state 就是数据源存放地，对应于一般 vue 对象里面的 data</span><br><span class="line">state 里面存放的数据是响应式的，vue 组件从 store 读取数据，若是 store 中的数据发生改变，依赖这相数据的组件也会发生更新</span><br><span class="line">它通过 mapState 把全局的 state 和 getters 映射到当前组件的 computed 计算属性</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="vuex-的-getter-特性是什么"><a href="#vuex-的-getter-特性是什么" class="headerlink" title="vuex 的 getter 特性是什么"></a>vuex 的 getter 特性是什么</h3><h4 id="-3"><a href="#-3" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getter 可以对 state 进行计算操作，它就是 store 的计算属性</span><br><span class="line">虽然在组件内也可以做计算属性，但是 getters 可以在多给件之间复用</span><br><span class="line">如果一个状态只在一个组件内使用，是可以不用 getters</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="vuex-的-mutation-特性是什么"><a href="#vuex-的-mutation-特性是什么" class="headerlink" title="vuex 的 mutation 特性是什么"></a>vuex 的 mutation 特性是什么</h3><h4 id="-4"><a href="#-4" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">action 类似于 muation, 不同在于：action 提交的是 mutation,而不是直接变更状态</span><br><span class="line">action 可以包含任意异步操作</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="不用-vuex-会带来什么问题"><a href="#不用-vuex-会带来什么问题" class="headerlink" title="不用 vuex 会带来什么问题"></a>不用 vuex 会带来什么问题</h3><h4 id="-5"><a href="#-5" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可维护性会下降，你要修改数据，你得维护 3 个地方</span><br><span class="line">可读性下降，因为一个组件里的数据，你根本就看不出来是从哪里来的</span><br><span class="line">增加耦合，大量的上传派发，会让耦合性大大的增加，本来 Vue 用 Component 就是为了减少耦合，现在这么用，和组件化的初衷相背</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="state-内部支持模块配置和模块嵌套，如何实现的？"><a href="#state-内部支持模块配置和模块嵌套，如何实现的？" class="headerlink" title="state 内部支持模块配置和模块嵌套，如何实现的？"></a>state 内部支持模块配置和模块嵌套，如何实现的？</h3><h4 id="-6"><a href="#-6" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在 store 构造方法中有 makeLocalContext 方法，所有 module 都会有一个 <span class="built_in">local</span> context，根据配置时的 path 进行匹配。所以执行如 dispatch(<span class="string">'submitOrder'</span>, payload)这类 action 时，默认的拿到都是 module 的 <span class="built_in">local</span> state，如果要访问最外层或者是其他 module 的 state，只能从 rootState 按照 path 路径逐步进行访问。</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="在执行-dispatch-触发-action-commit-同理-的时候，只需传入-type-payload-，action-执行函数中第一个参数-store-从哪里获取的？"><a href="#在执行-dispatch-触发-action-commit-同理-的时候，只需传入-type-payload-，action-执行函数中第一个参数-store-从哪里获取的？" class="headerlink" title="在执行 dispatch 触发 action(commit 同理)的时候，只需传入(type, payload)，action 执行函数中第一个参数 store 从哪里获取的？"></a>在执行 dispatch 触发 action(commit 同理)的时候，只需传入(type, payload)，action 执行函数中第一个参数 store 从哪里获取的？</h3><h4 id="-7"><a href="#-7" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store 初始化时，所有配置的 action 和 mutation 以及 getters 均被封装过。在执行如 dispatch(<span class="string">'submitOrder'</span>, payload)的时候，actions 中 <span class="built_in">type</span> 为 submitOrder 的所有处理方法都是被封装后的，其第一个参数为当前的 store 对象，所以能够获取到 &#123; dispatch, commit, state, rootState &#125; 等数据。</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Vuex-如何区分-state-是外部直接修改，还是通过-mutation-方法修改的？"><a href="#Vuex-如何区分-state-是外部直接修改，还是通过-mutation-方法修改的？" class="headerlink" title="Vuex 如何区分 state 是外部直接修改，还是通过 mutation 方法修改的？"></a>Vuex 如何区分 state 是外部直接修改，还是通过 mutation 方法修改的？</h3><h4 id="-8"><a href="#-8" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vuex 中修改 state 的唯一渠道就是执行 commit(<span class="string">'xx'</span>, payload) 方法，其底层通过执行 this._withCommit(fn) 设置_committing 标志变量为 <span class="literal">true</span>，然后才能修改 state，修改完毕还需要还原_committing 变量。外部修改虽然能够直接修改 state，但是并没有修改_committing 标志位，所以只要 watch 一下 state，state change 时判断是否_committing 值为 <span class="literal">true</span>，即可判断修改的合法性。</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="调试时的”时空穿梭”功能是如何实现的"><a href="#调试时的”时空穿梭”功能是如何实现的" class="headerlink" title="调试时的”时空穿梭”功能是如何实现的"></a>调试时的”时空穿梭”功能是如何实现的</h3><h4 id="-9"><a href="#-9" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devtoolPlugin 中提供了此功能。因为 dev 模式下所有的 state change 都会被记录下来，<span class="string">'时空穿梭'</span> 功能其实就是将当前的 state 替换为记录中某个时刻的 state 状态，利用 store.replaceState(targetState) 方法将执行 this._vm.state = state 实现。</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-title" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -283,6 +336,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/04/16/Vuex%E7%9B%B8%E5%85%B3/">Vuex相关</a>
+          </li>
         
           <li>
             <a href="/2020/04/16/title/">title</a>

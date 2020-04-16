@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Vuex相关 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="Vuex相关vuex 原理123vuex 仅仅是作为 vue 的一个插件而存在，不像 Redux,MobX 等库可以应用于所有框架，vuex 只能使用在 vue 上，很大的程度是因为其高度依赖于 vue 的 computed 依赖检测系统以及其插件系统，vuex 整体思想诞生于 flux,可其的实现方式完完全全的使用了 vue 自身的响应式设计，依赖监听、依赖收集都属于 vue 对对象 Prope">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vuex相关">
+<meta property="og:url" content="http://yoursite.com/2020/04/16/Vuex%E7%9B%B8%E5%85%B3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Vuex相关vuex 原理123vuex 仅仅是作为 vue 的一个插件而存在，不像 Redux,MobX 等库可以应用于所有框架，vuex 只能使用在 vue 上，很大的程度是因为其高度依赖于 vue 的 computed 依赖检测系统以及其插件系统，vuex 整体思想诞生于 flux,可其的实现方式完完全全的使用了 vue 自身的响应式设计，依赖监听、依赖收集都属于 vue 对对象 Prope">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-16T06:44:35.000Z">
+<meta property="article:modified_time" content="2020-04-16T06:56:07.547Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/header.jpeg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="https://www.baidu.com/" title
+        
+        >空间</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-Vuex相关" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Vuex相关
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/04/16/Vuex%E7%9B%B8%E5%85%B3/" class="article-date">
+  <time datetime="2020-04-16T06:44:35.000Z" itemprop="datePublished">2020-04-16</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="Vuex相关"><a href="#Vuex相关" class="headerlink" title="Vuex相关"></a>Vuex相关</h2><h3 id="vuex-原理"><a href="#vuex-原理" class="headerlink" title="vuex 原理"></a>vuex 原理</h3><h4 id=""><a href="#" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vuex 仅仅是作为 vue 的一个插件而存在，不像 Redux,MobX 等库可以应用于所有框架，vuex 只能使用在 vue 上，很大的程度是因为其高度依赖于 vue 的 computed 依赖检测系统以及其插件系统，</span><br><span class="line"></span><br><span class="line">vuex 整体思想诞生于 flux,可其的实现方式完完全全的使用了 vue 自身的响应式设计，依赖监听、依赖收集都属于 vue 对对象 Property <span class="built_in">set</span> get 方法的代理劫持。最后一句话结束 vuex 工作原理，vuex 中的 store 本质就是没有 template 的隐藏着的 vue 组件；</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="vuex-有哪几种属性"><a href="#vuex-有哪几种属性" class="headerlink" title="vuex 有哪几种属性"></a>vuex 有哪几种属性</h3><h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有 5 种，分别是 state、getter、mutation、action、module</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="vuex-的-store-特性是什么"><a href="#vuex-的-store-特性是什么" class="headerlink" title="vuex 的 store 特性是什么"></a>vuex 的 store 特性是什么</h3><h4 id="-2"><a href="#-2" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vuex 就是一个仓库，仓库里放了很多对象。其中 state 就是数据源存放地，对应于一般 vue 对象里面的 data</span><br><span class="line">state 里面存放的数据是响应式的，vue 组件从 store 读取数据，若是 store 中的数据发生改变，依赖这相数据的组件也会发生更新</span><br><span class="line">它通过 mapState 把全局的 state 和 getters 映射到当前组件的 computed 计算属性</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="vuex-的-getter-特性是什么"><a href="#vuex-的-getter-特性是什么" class="headerlink" title="vuex 的 getter 特性是什么"></a>vuex 的 getter 特性是什么</h3><h4 id="-3"><a href="#-3" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getter 可以对 state 进行计算操作，它就是 store 的计算属性</span><br><span class="line">虽然在组件内也可以做计算属性，但是 getters 可以在多给件之间复用</span><br><span class="line">如果一个状态只在一个组件内使用，是可以不用 getters</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="vuex-的-mutation-特性是什么"><a href="#vuex-的-mutation-特性是什么" class="headerlink" title="vuex 的 mutation 特性是什么"></a>vuex 的 mutation 特性是什么</h3><h4 id="-4"><a href="#-4" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">action 类似于 muation, 不同在于：action 提交的是 mutation,而不是直接变更状态</span><br><span class="line">action 可以包含任意异步操作</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="不用-vuex-会带来什么问题"><a href="#不用-vuex-会带来什么问题" class="headerlink" title="不用 vuex 会带来什么问题"></a>不用 vuex 会带来什么问题</h3><h4 id="-5"><a href="#-5" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可维护性会下降，你要修改数据，你得维护 3 个地方</span><br><span class="line">可读性下降，因为一个组件里的数据，你根本就看不出来是从哪里来的</span><br><span class="line">增加耦合，大量的上传派发，会让耦合性大大的增加，本来 Vue 用 Component 就是为了减少耦合，现在这么用，和组件化的初衷相背</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="state-内部支持模块配置和模块嵌套，如何实现的？"><a href="#state-内部支持模块配置和模块嵌套，如何实现的？" class="headerlink" title="state 内部支持模块配置和模块嵌套，如何实现的？"></a>state 内部支持模块配置和模块嵌套，如何实现的？</h3><h4 id="-6"><a href="#-6" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在 store 构造方法中有 makeLocalContext 方法，所有 module 都会有一个 <span class="built_in">local</span> context，根据配置时的 path 进行匹配。所以执行如 dispatch(<span class="string">'submitOrder'</span>, payload)这类 action 时，默认的拿到都是 module 的 <span class="built_in">local</span> state，如果要访问最外层或者是其他 module 的 state，只能从 rootState 按照 path 路径逐步进行访问。</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="在执行-dispatch-触发-action-commit-同理-的时候，只需传入-type-payload-，action-执行函数中第一个参数-store-从哪里获取的？"><a href="#在执行-dispatch-触发-action-commit-同理-的时候，只需传入-type-payload-，action-执行函数中第一个参数-store-从哪里获取的？" class="headerlink" title="在执行 dispatch 触发 action(commit 同理)的时候，只需传入(type, payload)，action 执行函数中第一个参数 store 从哪里获取的？"></a>在执行 dispatch 触发 action(commit 同理)的时候，只需传入(type, payload)，action 执行函数中第一个参数 store 从哪里获取的？</h3><h4 id="-7"><a href="#-7" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store 初始化时，所有配置的 action 和 mutation 以及 getters 均被封装过。在执行如 dispatch(<span class="string">'submitOrder'</span>, payload)的时候，actions 中 <span class="built_in">type</span> 为 submitOrder 的所有处理方法都是被封装后的，其第一个参数为当前的 store 对象，所以能够获取到 &#123; dispatch, commit, state, rootState &#125; 等数据。</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Vuex-如何区分-state-是外部直接修改，还是通过-mutation-方法修改的？"><a href="#Vuex-如何区分-state-是外部直接修改，还是通过-mutation-方法修改的？" class="headerlink" title="Vuex 如何区分 state 是外部直接修改，还是通过 mutation 方法修改的？"></a>Vuex 如何区分 state 是外部直接修改，还是通过 mutation 方法修改的？</h3><h4 id="-8"><a href="#-8" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vuex 中修改 state 的唯一渠道就是执行 commit(<span class="string">'xx'</span>, payload) 方法，其底层通过执行 this._withCommit(fn) 设置_committing 标志变量为 <span class="literal">true</span>，然后才能修改 state，修改完毕还需要还原_committing 变量。外部修改虽然能够直接修改 state，但是并没有修改_committing 标志位，所以只要 watch 一下 state，state change 时判断是否_committing 值为 <span class="literal">true</span>，即可判断修改的合法性。</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="调试时的”时空穿梭”功能是如何实现的"><a href="#调试时的”时空穿梭”功能是如何实现的" class="headerlink" title="调试时的”时空穿梭”功能是如何实现的"></a>调试时的”时空穿梭”功能是如何实现的</h3><h4 id="-9"><a href="#-9" class="headerlink" title=""></a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devtoolPlugin 中提供了此功能。因为 dev 模式下所有的 state change 都会被记录下来，<span class="string">'时空穿梭'</span> 功能其实就是将当前的 state 替换为记录中某个时刻的 state 状态，利用 store.replaceState(targetState) 方法将执行 this._vm.state = state 实现。</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/04/16/title/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">title</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/header.jpeg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        徐召鹏
+      
+    </h3>
+    <p class="avatar-slogan">
+      挣扎在社会底层，但不服输的程序猿。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/16/Vuex%E7%9B%B8%E5%85%B3/">Vuex相关</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/16/title/">title</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/18/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%85%B3/">字符串相关</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/17/%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/">数组相关</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/13/hello-world/">Hexo写文章</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://www.baidu.com/" title target='_blank'
+        >百度</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="mobile-nav-link">空间</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

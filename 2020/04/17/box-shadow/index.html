@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>box-shadow | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="阴影box-shadow  有六个属性值1、h-shadow【必需】&#96;这个值代表的是阴影在x轴上的阴影位置。可以是负值。 当它为正值的时候表示向右位移一定的距离【出现在元素的右边】，负值表示向左位移【出现在元素的左边】。这个距离的单位可以是px、em或者rem；&#96; 12box-shadow: 10px 0px 10px rgba(0,0,0,0.9) &#x2F;*阴影出现在元素的右侧*&amp;#x2F">
+<meta property="og:type" content="article">
+<meta property="og:title" content="box-shadow">
+<meta property="og:url" content="http://yoursite.com/2020/04/17/box-shadow/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="阴影box-shadow  有六个属性值1、h-shadow【必需】&#96;这个值代表的是阴影在x轴上的阴影位置。可以是负值。 当它为正值的时候表示向右位移一定的距离【出现在元素的右边】，负值表示向左位移【出现在元素的左边】。这个距离的单位可以是px、em或者rem；&#96; 12box-shadow: 10px 0px 10px rgba(0,0,0,0.9) &#x2F;*阴影出现在元素的右侧*&amp;#x2F">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-17T01:46:22.000Z">
+<meta property="article:modified_time" content="2020-04-17T01:49:07.626Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/header.jpeg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="https://www.baidu.com/" title
+        
+        >空间</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-box-shadow" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      box-shadow
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/04/17/box-shadow/" class="article-date">
+  <time datetime="2020-04-17T01:46:22.000Z" itemprop="datePublished">2020-04-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>
+  </div>
+
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="阴影box-shadow-有六个属性值"><a href="#阴影box-shadow-有六个属性值" class="headerlink" title="阴影box-shadow  有六个属性值"></a>阴影box-shadow  有六个属性值</h2><h3 id="1、h-shadow【必需】"><a href="#1、h-shadow【必需】" class="headerlink" title="1、h-shadow【必需】"></a>1、h-shadow【必需】</h3><p>`<br>这个值代表的是阴影在x轴上的阴影位置。可以是负值。</p>
+<p>当它为正值的时候表示向右位移一定的距离【出现在元素的右边】，负值表示向左位移【出现在元素的左边】。这个距离的单位可以是px、em或者rem；<br>`</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 0px 10px rgba(0,0,0,0.9) &#x2F;*阴影出现在元素的右侧*&#x2F;</span><br><span class="line">box-shadow: -10px 0px 10px rgba(0,0,0,0.9) &#x2F;*阴影出现在元素的左侧*&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2、v-shadow【必需】"><a href="#2、v-shadow【必需】" class="headerlink" title="2、v-shadow【必需】"></a>2、v-shadow【必需】</h3><p>`<br>这个值表示阴影在y轴上的位置。也可以是负值。</p>
+<p>当值为负的时候表示向上偏移一定的距离【出现在元素的上方】；值为正的时候表示向下偏移一定的距离【出现的元素的下方】<br>`</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 0px -20px 10px rgba(0,0,0,0.9)&#x2F;*阴影出现在元素上方*&#x2F; </span><br><span class="line">box-shadow: 0px 20px 10px rgba(0,0,0,0.9)&#x2F;*阴影出现在元素下方*&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3、blur【可选】"><a href="#3、blur【可选】" class="headerlink" title="3、blur【可选】"></a>3、blur【可选】</h3><p><code>blur指的是阴影的模糊半径。这个值使得阴影部分的过渡看起来更柔和。我们可以试一试不同blur值对阴影效果的影响：</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 10px 5px rgba(0,0,0,0.9) &#x2F;*blur值为5px*&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4、spread【可选】"><a href="#4、spread【可选】" class="headerlink" title="4、spread【可选】"></a>4、spread【可选】</h3><p><code>spread表示的是阴影的半径。我在网上看到有人对spread和blur的区别发出疑问，其实很简单：blur用于描述模糊半径，它的值决定了阴影的模糊程度；而spread是表示阴影所占区域的大小，这是两个不同的概念。</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.9);&#x2F;*阴影半径为5px*&#x2F;</span><br></pre></td></tr></table></figure></div>
+<h3 id="5、color【可选】"><a href="#5、color【可选】" class="headerlink" title="5、color【可选】"></a>5、color【可选】</h3><p><code>阴影的颜色可以用任何颜色单位来表示。当我们没有设置color值的时候，默认就是黑色。</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.9);&#x2F;*黑色阴影，用rgba表示，透明度为0.9*&#x2F; </span><br><span class="line"></span><br><span class="line">box-shadow: 10px 10px 10px 5px rgb(255,0,0);&#x2F;*红色阴影，用rgb表示*&#x2F; </span><br><span class="line"></span><br><span class="line">box-shadow: 10px 10px 10px 5px #afe;&#x2F;*浅蓝色阴影，用十六进制颜色表示法*&#x2F; </span><br><span class="line"></span><br><span class="line">box-shadow: 10px 10px 10px 5px blue;&#x2F;*蓝色阴影，用颜色单词表示*&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6、inset-【可选】"><a href="#6、inset-【可选】" class="headerlink" title="6、inset 【可选】"></a>6、inset 【可选】</h3><p><code>默认情况下，我们设置的阴影都是外部阴影，而这个属性值的作用是将外部阴影转换成内部阴影。</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 10px 10px 5px blue; &#x2F;*默认为外部阴影*&#x2F; </span><br><span class="line"></span><br><span class="line">box-shadow: 10px 10px 10px 5px blue inset;&#x2F;*将外部阴影切换为内部阴影*&#x2F;</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/04/17/%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%9A%84css/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">不常用的css</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/header.jpeg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        徐召鹏
+      
+    </h3>
+    <p class="avatar-slogan">
+      挣扎在社会底层,但不服输的程序猿。
+    </p>
+    <!-- <div style="height: 200px;">
+      <p class="avatar-slogan">
+        挣扎在社会底层,但不服输的程序猿。
+      </p>
+      <p class="avatar-slogan"></p>
+    </div> -->
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue%E5%85%A8%E5%AE%B6%E6%A1%B6/">Vue全家桶</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/17/box-shadow/">box-shadow</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/17/%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%9A%84css/">不常用的css</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/16/Axios/">axios原理及面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/16/Vuex%E7%9B%B8%E5%85%B3/">Vuex相关</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/16/title/">title</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://www.baidu.com/" title target='_blank'
+        >百度</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="mobile-nav-link">空间</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

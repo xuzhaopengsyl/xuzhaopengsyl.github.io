@@ -63,6 +63,111 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-box-shadow" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/17/box-shadow/">box-shadow</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/04/17/box-shadow/" class="article-date">
+  <time datetime="2020-04-17T01:46:22.000Z" itemprop="datePublished">2020-04-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>
+  </div>
+
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="阴影box-shadow-有六个属性值"><a href="#阴影box-shadow-有六个属性值" class="headerlink" title="阴影box-shadow  有六个属性值"></a>阴影box-shadow  有六个属性值</h2><h3 id="1、h-shadow【必需】"><a href="#1、h-shadow【必需】" class="headerlink" title="1、h-shadow【必需】"></a>1、h-shadow【必需】</h3><p>`<br>这个值代表的是阴影在x轴上的阴影位置。可以是负值。</p>
+<p>当它为正值的时候表示向右位移一定的距离【出现在元素的右边】，负值表示向左位移【出现在元素的左边】。这个距离的单位可以是px、em或者rem；<br>`</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 0px 10px rgba(0,0,0,0.9) &#x2F;*阴影出现在元素的右侧*&#x2F;</span><br><span class="line">box-shadow: -10px 0px 10px rgba(0,0,0,0.9) &#x2F;*阴影出现在元素的左侧*&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2、v-shadow【必需】"><a href="#2、v-shadow【必需】" class="headerlink" title="2、v-shadow【必需】"></a>2、v-shadow【必需】</h3><p>`<br>这个值表示阴影在y轴上的位置。也可以是负值。</p>
+<p>当值为负的时候表示向上偏移一定的距离【出现在元素的上方】；值为正的时候表示向下偏移一定的距离【出现的元素的下方】<br>`</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 0px -20px 10px rgba(0,0,0,0.9)&#x2F;*阴影出现在元素上方*&#x2F; </span><br><span class="line">box-shadow: 0px 20px 10px rgba(0,0,0,0.9)&#x2F;*阴影出现在元素下方*&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3、blur【可选】"><a href="#3、blur【可选】" class="headerlink" title="3、blur【可选】"></a>3、blur【可选】</h3><p><code>blur指的是阴影的模糊半径。这个值使得阴影部分的过渡看起来更柔和。我们可以试一试不同blur值对阴影效果的影响：</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 10px 5px rgba(0,0,0,0.9) &#x2F;*blur值为5px*&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4、spread【可选】"><a href="#4、spread【可选】" class="headerlink" title="4、spread【可选】"></a>4、spread【可选】</h3><p><code>spread表示的是阴影的半径。我在网上看到有人对spread和blur的区别发出疑问，其实很简单：blur用于描述模糊半径，它的值决定了阴影的模糊程度；而spread是表示阴影所占区域的大小，这是两个不同的概念。</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.9);&#x2F;*阴影半径为5px*&#x2F;</span><br></pre></td></tr></table></figure></div>
+<h3 id="5、color【可选】"><a href="#5、color【可选】" class="headerlink" title="5、color【可选】"></a>5、color【可选】</h3><p><code>阴影的颜色可以用任何颜色单位来表示。当我们没有设置color值的时候，默认就是黑色。</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.9);&#x2F;*黑色阴影，用rgba表示，透明度为0.9*&#x2F; </span><br><span class="line"></span><br><span class="line">box-shadow: 10px 10px 10px 5px rgb(255,0,0);&#x2F;*红色阴影，用rgb表示*&#x2F; </span><br><span class="line"></span><br><span class="line">box-shadow: 10px 10px 10px 5px #afe;&#x2F;*浅蓝色阴影，用十六进制颜色表示法*&#x2F; </span><br><span class="line"></span><br><span class="line">box-shadow: 10px 10px 10px 5px blue;&#x2F;*蓝色阴影，用颜色单词表示*&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6、inset-【可选】"><a href="#6、inset-【可选】" class="headerlink" title="6、inset 【可选】"></a>6、inset 【可选】</h3><p><code>默认情况下，我们设置的阴影都是外部阴影，而这个属性值的作用是将外部阴影转换成内部阴影。</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 10px 10px 5px blue; &#x2F;*默认为外部阴影*&#x2F; </span><br><span class="line"></span><br><span class="line">box-shadow: 10px 10px 10px 5px blue inset;&#x2F;*将外部阴影切换为内部阴影*&#x2F;</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-不常用的css" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/17/%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%9A%84css/">不常用的css</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/04/17/%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%9A%84css/" class="article-date">
+  <time datetime="2020-04-17T01:06:04.000Z" itemprop="datePublished">2020-04-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>
+  </div>
+
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="一、文字竖行排列"><a href="#一、文字竖行排列" class="headerlink" title="一、文字竖行排列"></a>一、文字竖行排列</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">writing-mode: vertical-lr;&#x2F;*从左向右 从右向左是 writing-mode: vertical-rl;*&#x2F;  </span><br><span class="line">writing-mode: tb-lr;&#x2F;*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="二、超过N行，显示…"><a href="#二、超过N行，显示…" class="headerlink" title="二、超过N行，显示…"></a>二、超过N行，显示…</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">text-overflow: -o-ellipsis-lastline;</span><br><span class="line">overflow: hidden;</span><br><span class="line">text-overflow: ellipsis;</span><br><span class="line">display: -webkit-box;</span><br><span class="line">-webkit-line-clamp: 2;</span><br><span class="line">-webkit-box-orient: vertical;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、0-5px-的下划线怎么写-使用css3-缩放"><a href="#三、0-5px-的下划线怎么写-使用css3-缩放" class="headerlink" title="三、0.5px 的下划线怎么写(使用css3 缩放)"></a>三、0.5px 的下划线怎么写(使用css3 缩放)</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">height: 1px;</span><br><span class="line">transform: scaleY(0.5);</span><br><span class="line">transform-origin: 50% 100%;</span><br><span class="line">background: #000;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="四、css3滚动弹性优化"><a href="#四、css3滚动弹性优化" class="headerlink" title="四、css3滚动弹性优化"></a>四、css3滚动弹性优化</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-overflow-scrolling: touch;        弹性效果</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="五、阴影-box-shadow"><a href="#五、阴影-box-shadow" class="headerlink" title="五、阴影 box-shadow"></a>五、阴影 box-shadow</h2><p><code>定义：box-shadow是css3新增的一个属性。在W3School里，定义box-shadow是向框添加一个或者多个阴影的属性。 语法：box-shadow: h-shadow v-shadow blur spread color inset.  h-shadow: 阴影的水平位置 v-shadow：阴影的垂直位置 blur：阴影的模糊半径 spread：阴影的半径 color：阴影的颜色 inset：将外部阴影改成内部阴影【outset反过来】 根据box-shadow的定义，我们可以为一个框设置一个阴影，也可以设置多个阴影。</code></p>
+<p><code>当我们需要设置多个阴影时，中间需要将每个阴影用逗号隔开。</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">width: 100px; </span><br><span class="line">height: 100px; </span><br><span class="line">background: yellow; </span><br><span class="line">margin: 100px auto; </span><br><span class="line">border-radius: 50%; </span><br><span class="line">box-shadow: 10px 10px 20px 10px rgba(255,255,0,0.5), -10px 10px 10px 10px rgba(255,255,255,0.5)</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-Axios" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -137,6 +242,10 @@
   <time datetime="2020-04-16T06:44:35.000Z" itemprop="datePublished">2020-04-16</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vue%E5%85%A8%E5%AE%B6%E6%A1%B6/">Vue全家桶</a>
+  </div>
+
     
   </div>
   
@@ -225,6 +334,10 @@
   <time datetime="2018-02-18T05:42:04.000Z" itemprop="datePublished">2018-02-18</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+
     
   </div>
   
@@ -274,6 +387,10 @@
   <time datetime="2018-02-17T05:42:15.000Z" itemprop="datePublished">2018-02-17</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+
     
   </div>
   
@@ -322,6 +439,10 @@
   <time datetime="2018-01-13T05:30:49.000Z" itemprop="datePublished">2018-01-13</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/HEXO/">HEXO</a>
+  </div>
+
     
   </div>
   
@@ -378,6 +499,13 @@
 
   
     
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue%E5%85%A8%E5%AE%B6%E6%A1%B6/">Vue全家桶</a></li></ul>
+    </div>
+  </div>
+
 
   
     
@@ -401,6 +529,14 @@
       <ul>
         
           <li>
+            <a href="/2020/04/17/box-shadow/">box-shadow</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/17/%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%9A%84css/">不常用的css</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/16/Axios/">axios原理及面试题</a>
           </li>
         
@@ -410,14 +546,6 @@
         
           <li>
             <a href="/2020/04/16/title/">title</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/18/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%85%B3/">字符串相关</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/17/%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/">数组相关</a>
           </li>
         
       </ul>
